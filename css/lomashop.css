@@ -1,0 +1,237 @@
+:root{
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --pink-color: #fe65c3;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-color);
+}
+
+.main-title::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Start navbar */
+
+.navbar{
+    background-color: #eee;
+}
+
+.navbar .logo{
+    color: #fff;
+}
+
+.navbar .navbar-nav .nav-link{
+    color: black;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green-color);
+}
+
+.navbar ul.dropdown-menu{
+    border: none;
+    border-radius: 0;
+    background-color: #eee;
+}
+
+.navbar ul.dropdown-menu li a.dropdown-item{
+    font-weight: bold;
+}
+
+.navbar ul.dropdown-menu li a.dropdown-item:hover{
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+@media(max-width:766px){
+    .navbar .navbar-toggler{
+        color: black;
+    }
+}
+
+/* End navbar */
+
+/* Start landing */
+.landing{
+    min-height: calc(100vh - 72px);
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+
+.landing .overlay{
+    background: rgba(49, 55, 61, .7);
+    width: 100%;
+    min-height: calc(100vh - 72px);
+}
+
+.landing p{
+    max-width: 400px;
+    color: var(--green-color);
+}
+
+.landing:hover svg{
+    animation: move 3s infinite;
+}
+
+.landing svg{
+    font-size: 150px;
+    display: block;
+    color: var(--pink-color);
+    margin: auto;
+}
+
+.landing a{
+    background-color: var(--pink-color);
+    color: black;
+    font-weight: bold;
+}
+/* End landing */
+
+/* Start products */
+
+.products h2{
+    color: var(--pink-color);
+}
+
+.products h2:hover{
+    animation: moving 3s;
+}
+
+.products .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.products .button{
+    color: #fff;
+}
+
+.products .button span.price{
+    text-decoration: line-through;
+    text-decoration-style: double;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--green-color);
+    -webkit-text-decoration-color: var(--green-color);
+    -moz-text-decoration-color: var(--green-color);
+    -o-text-decoration-color: var(--green-color);
+}
+
+/* End products */
+
+/* Start offers */
+.offers{
+    color: var(--pink-color);
+}
+
+.offers h2:hover{
+    animation: moving 3s;
+}
+
+.offers .button span.price{
+    text-decoration: line-through;
+    text-decoration-style: double;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--green-color);
+    -moz-text-decoration-color: var(--green-color);
+}
+
+/* End offers */
+
+/* Start contact */
+.contact{
+    color: var(--pink-color);
+}
+
+.contact h2:hover{
+    animation: moving 3s;
+}
+
+.contact form {
+    padding-top: 70px;
+}
+
+.contact form input{
+    width: 400px;
+}
+
+.contact form textarea{
+    width: 400px;
+    height: 200px;
+    resize: none;
+}
+
+.contact form input[type="submit"]{
+    background-color: var(--pink-color);
+    border: 1px solid var(--green-color);
+    color: #fff; 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact form input[type="submit"]:hover{
+    background-color: var(--green-color);
+    transition: all .3s ease-in-out;
+}
+/* End contact */
+
+/* Start footer */
+.footer{
+    padding: 20px 0;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.footer span{
+    color: var(--pink-color);
+}
+
+/* End footer */
+/* Start keyframes */
+
+@keyframes move{
+
+    0%{
+        transform: translateX(50px);
+    }
+    50%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(50px);
+    }
+}
+
+@keyframes moving{
+    50%{
+        transform: rotate(180deg);
+    }
+}
+
+/* End keyframes */
